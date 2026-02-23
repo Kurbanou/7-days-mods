@@ -22,9 +22,12 @@
 	<set xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']/@value">60000</set>
 	<set xpath="/items/item[@name='resourcePaper']/property[@name='Stacknumber']/@value">60000</set>
 	<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='Stacknumber']/@value">60000</set>
-	<set xpath="/items/item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">6000</set>
-	<set xpath="/items/item[@name='ammoJunkTurretShell']/property[@name='Stacknumber']/@value">6000</set>
-	<set xpath="/items/item[@name='ammoJunkTurretAP']/property[@name='Stacknumber']/@value">6000</set>
+	<set xpath="/items/item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoBundleJunkTurretRegular']/property[@class='Action0']/property[@name='Create_item_count']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoBundleJunkTurretAP']/property[@class='Action0']/property[@name='Create_item_count']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoBundleJunkTurretShell']/property[@class='Action0']/property[@name='Create_item_count']/@value">60000</set>
+
+
 </configs>
 
 
