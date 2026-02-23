@@ -13,11 +13,6 @@
     <!-- сетка ворота -->
     <set xpath="/blocks/block[@name='chainlinkFenceDoor']/property[@name='MaxDamage']/@value">4500</set>
 
-
-    <set xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']/@value">30</set>
-    <set xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertSpeed']/@value">4</set>
-
-
 </configs>
 
 

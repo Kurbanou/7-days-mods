@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs> 
+  <!-- патрон дробовика -->
+
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='RoundRayCount']/@value">40</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='BlockDamage']/@value">0.0001</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityDamage']/@value">20</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">8</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityPenetrationCount ']/@value">4</set>
+
+</configs>
