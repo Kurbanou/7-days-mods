@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<xml>
+      <Name value="Collector" />
+      <DisplayName value="Collector more water" />
+      <Version value="1.0.0.0" />
+      <Description value="Collector more water" /> <!-- (Optional) -->
+      <Author value="Farid" /> <!-- (Optional) -->
+      <Website value="" /> <!-- (Optional) -->
+	</xml>
