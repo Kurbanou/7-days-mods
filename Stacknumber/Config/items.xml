@@ -1,0 +1,33 @@
+<configs>
+	<!-- Меняем стек чистой воды  -->
+	<set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']/@value">5000</set>
+	
+	<!-- Меняем стек мутной воды  -->
+	<set xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']/@value">5000</set>
+	
+	<!-- Меняем стек пустой банки -->
+	<set xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']/@value">5000</set>
+
+	<!-- Меняем стек супер кукурузы  -->
+	<set xpath="/items/item[@name='foodCropGraceCorn']/property[@name='Stacknumber']/@value">5000</set>
+
+	<!-- Меняем стек камня цемента глины бетона и др. -->
+	<set xpath="/items/item[@name='resourceRockSmall']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceConcreteMix']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceCement']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceClayLump']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceGunPowder']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceBone']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourcePaper']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='resourceBulletCasing']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoJunkTurretRegular']/property[@name='Stacknumber']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoBundleJunkTurretRegular']/property[@class='Action0']/property[@name='Create_item_count']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoBundleJunkTurretAP']/property[@class='Action0']/property[@name='Create_item_count']/@value">60000</set>
+	<set xpath="/items/item[@name='ammoBundleJunkTurretShell']/property[@class='Action0']/property[@name='Create_item_count']/@value">60000</set>
+
+
+</configs>
+
+
