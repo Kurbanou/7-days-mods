@@ -1,0 +1,29 @@
+<addnew>
+	<append xpath="/recipes">	
+	
+	<recipe name="resourceAcid" count="1" craft_time="1" craft_area="chemistryStation">
+		<ingredient name="resourceOilShale" count="50"/>
+		<ingredient name="resourcePotassiumNitratePowder" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="1"/>
+	</recipe>	
+	
+	<recipe name="resourceScrapPolymers" count="1" craft_time="1" craft_area="chemistryStation">
+		<ingredient name="resourceOilShale" count="6"/>		
+	</recipe>
+
+	
+
+	
+	</append>
+
+	
+</addnew>
+
+<!-- <configs>
+    	<set xpath="/recipes/recipe[@name='drinkJarGrandpasMoonshine']/@craft_time">1</set>
+	</configs> -->
+
+
+
+
+

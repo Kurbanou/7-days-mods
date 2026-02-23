@@ -1,0 +1,7 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+
+ammoArrowShock,itemClasses,ItemClass,,x,Shock Arrow,Шоковая стрела,,,,,,,,,,,,,
+ammoArrowShockDesc,itemClasses,ItemClass,,x,An arrow that shocks the target if fired from a modified bow.,Стрела, которая оглушает цель при выстреле из модифицированного лука.,,,,,,,,,,,
+ammoBundleArrowShock,itemClasses,ItemClass,,x,Bundle of Shock Arrows,Пакет шоковых стрел,,,,,,,,,,,,,
+ammoBundleArrowShockDesc,itemClasses,ItemClass,,x,A pack of electrified arrows. Requires special bow mod to trigger effect.,Пакет электризированных стрел. Требуется специальный мод для лука, чтобы активировать эффект.,,,,,,,,,,,

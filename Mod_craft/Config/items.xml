@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+      <!-- Для WireTool -->
+  <append xpath="/items/item[@name='meleeToolWireTool']/property[@class='Action1']">
+      <property name="MaxWireLength" value="50"/>
+  </append>
+  <set xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']/@value">120</set>
+  <set xpath="/items/item[@name='drinkJarBeer']/property[@name='Stacknumber']/@value">120</set>
+
+</configs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+    <append xpath="/traders/trader_info/trader_items">
+        <item group="perkBooks" count="80,100" unique_only="false"/>
+        <item group="skillMagazines" count="80,100" unique_only="false"/>
+    </append>
+
+    <set xpath="/traders/trader_info/trader_items/item[@group='skillMagazines']/@unique_only">false</set>
+    <set xpath="/traders/trader_info/trader_items/item[@group='perkBooks']/@unique_only">false</set>
+
+    <set xpath="/traders/trader_info/trader_items/item[@group='skillMagazines']/@count">80,100</set>
+    <set xpath="/traders/trader_info/trader_items/item[@group='perkBooks']/@count">80,100</set>
+
+</configs>

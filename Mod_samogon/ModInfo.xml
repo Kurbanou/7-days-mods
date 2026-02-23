@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="Samogon" />
+    <DisplayName value="Samogon" />
+    <Description value="Samogon" />
+    <Author value="Farid" />
+    <Version value="1.0" />
+    <Website value="" />
+    <TargetVersion value="A18.4" />  <!-- Важно указать вашу версию! -->
+</xml>

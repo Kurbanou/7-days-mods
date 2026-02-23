@@ -1,0 +1,4 @@
+<configs>
+    <!-- 1. Усиление базового металла -->
+    <set xpath="/materials/material[@id='Mmetal']/property[@name='MaxDamage']/@value">6000</set>
+</configs>

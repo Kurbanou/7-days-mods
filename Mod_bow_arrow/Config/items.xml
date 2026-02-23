@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+   
+    <!-- для стрелы -->
+  <append xpath="/items">
+    <item name="ammoArrowShock">	
+      <property name="Extends" value="ammoArrowIron"/>
+      <property name="DisplayType" value="ammoArrowAP"/>
+      <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Bows/Arrows/arrow_steelPrefab.prefab"/>
+      <property name="HoldType" value="45"/>
+      <property name="HandMeshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+      <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+      <property name="EconomicValue" value="57"/>
+      <property name="TraderStageTemplate" value="arrowsTier2"/><!-- ammoArrowShock -->
+      <property name="EconomicBundleSize" value="5"/>
+      <property name="StickyOffset" value=".13"/>
+      <property name="SoundPickup" value="arrows_grab"/>
+      <property name="SoundPlace" value="arrows_place"/>
+      <property name="CustomIcon" value="ammoArrowShock"/>
+    
+    
+      <effect_group name="ammoArrowShock" tiered="false"> <!-- ammoArrowShock -->
+        <passive_effect name="EntityDamage" operation="base_set" value="42" tags="perkArchery"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="5" tags="perkArchery"/>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.5"/>
+        <display_value name="dTargetArmor" value="-.5"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+        <passive_effect name="ProjectileVelocity" operation="base_set" value="55" tags="perkArchery"/>
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffShocked" duration="6">
+          <requirement name="TargetTags" tags="zombie,animal"/>      
+      </triggered_effect>
+      </effect_group>
+      <effect_group name="perkPenetrator" tiered="false">
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkArchery">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkArchery">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkArchery">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkArchery">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+      </effect_group>
+    </item>
+
+    <item name="ammoBundleArrowShock">
+      <property name="Extends" value="ammoBundleArrowStone"/>
+      <property name="CustomIcon" value="ammoArrowShock"/>
+      <property name="EconomicValue" value="1140"/>
+      <property name="TraderStageTemplate" value="arrowsTier2"/><!-- ammoBundleArrowSteelAP -->
+      
+      <property class="Action0">
+        <property name="Create_item" value="ammoArrowShock"/>
+      </property>
+    </item>    
+
+  </append>
+
+  
+  <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/property[@class='Action0']/property[@name='Magazine_items']/@value">
+    ammoArrowStone,ammoArrowIron,ammoArrowSteel,ammoArrowSteelAP,ammoArrowFlaming,ammoArrowExploding,ammoArrowShock
+  </set>
+
+  <set xpath="/items/item[@name='gunBowT1WoodenBow']/property[@class='Action0']/property[@name='Magazine_items']/@value">
+    ammoArrowStone,ammoArrowIron,ammoArrowSteel,ammoArrowSteelAP,ammoArrowFlaming,ammoArrowExploding,ammoArrowShock
+  </set>
+
+  <set xpath="/items/item[@name='gunBowT3CompoundBow']/property[@class='Action0']/property[@name='Magazine_items']/@value">
+    ammoArrowStone,ammoArrowIron,ammoArrowSteel,ammoArrowSteelAP,ammoArrowFlaming,ammoArrowExploding,ammoArrowShock
+  </set>
+
+  <!-- патрон дробовика -->
+
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='RoundRayCount']/@value">40</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='BlockDamage']/@value">0.0001</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityDamage']/@value">20</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">8</set>
+  <set xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityPenetrationCount ']/@value">4</set>
+
+
+    <!-- Примитивный лук -->
+    <!-- 1. Основные параметры -->   
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/property[@class='Action0']/property[@name='Max_strain_time']/@value">0.35</set>
+
+    <!-- 2. Боевые характеристики -->
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']/@value">45</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add']/@value">0.15,0.75</set>
+  
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='ProjectileVelocity']/@value">0.1</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">30</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='MaxRange']/@value">120</set>
+
+    <!-- 3. Точность и отдача -->
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='SpreadDegreesVertical']/@value">2.0</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='SpreadDegreesHorizontal']/@value">2.0</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='SpreadMultiplierAiming']/@value">0.15</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='KickDegreesVerticalMin']/@value">0.3</set>
+    <set xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='KickDegreesVerticalMax']/@value">0.3</set>
+
+ 
+
+
+    <!-- Деревянный лук -->
+  <!-- 1. Основные параметры (скорострельность) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/property[@class='Action0']/property[@name='Max_strain_time']/@value">0.3</set> <!-- Быстрее, чем у T0 (0.35) -->
+
+    <!-- 2. Боевые характеристики (урон, скорость стрелы, дальность) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']/@value">55</set> <!-- Базовый урон выше, чем у T0 (5) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]/@value">0.05,0.05</set> <!-- Уменьшаем случайный разброс урона -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and @tier]/@value">0.12,0.6</set> <!-- Урон по уровням: сильнее, чем у T0 (0.15,0.75) -->
+
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='ProjectileVelocity' and @operation='perc_add' and not(@tier)]/@value">0.15</set> <!-- Скорость стрелы выше, чем у T0 (0.1) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">35</set> <!-- Дальность эффективного урона больше, чем у T0 (30) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='MaxRange']/@value">130</set> <!-- Макс. дальность выше, чем у T0 (120) -->
+
+    <!-- 3. Точность и отдача -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='SpreadDegreesVertical']/@value">1.8</set> <!-- Лучше, чем у T0 (2.0) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='SpreadDegreesHorizontal']/@value">1.8</set>
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='SpreadMultiplierAiming']/@value">0.12</set> <!-- Ещё точнее при прицеливании (T0: 0.15) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='KickDegreesVerticalMin']/@value">0.25</set> <!-- Меньше отдачи, чем у T0 (0.3) -->
+    <set xpath="/items/item[@name='gunBowT1WoodenBow']/effect_group/passive_effect[@name='KickDegreesVerticalMax']/@value">0.25</set>
+
+    <!-- Композитный лук -->
+    <!-- 1. Основные параметры (скорострельность) -->
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/property[@class='Action0']/property[@name='Max_strain_time']/@value">0.25</set> 
+    <!-- Быстрее, чем у T1 (0.3) -->
+
+    <!-- 2. Боевые характеристики -->
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']/@value">65</set> 
+    <!-- Базовый урон выше, чем у T1 (12) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]/@value">0.03,0.03</set> 
+    <!-- Минимальный случайный разброс урона -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and @tier]/@value">0.1,0.5</set> 
+    <!-- Урон по уровням: 0.1-0.5 (баланс между T1 и ванилом) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='ProjectileVelocity' and @operation='perc_add' and not(@tier)]/@value">0.25</set> 
+    <!-- Скорость стрелы +25% (T1: +15%) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">40</set> 
+    <!-- Дальность эффективного урона 40м (T1: 35) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='MaxRange']/@value">150</set> 
+    <!-- Макс. дальность 150м (T1: 130) -->
+
+    <!-- 3. Точность и отдача -->
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='SpreadDegreesVertical']/@value">1.5</set> 
+    <!-- Разброс 1.5° (T1: 1.8°) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='SpreadDegreesHorizontal']/@value">1.5</set>
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='SpreadMultiplierAiming']/@value">0.08</set> 
+    <!-- Сверхточность при прицеливании (T1: 0.12) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='KickDegreesVerticalMin']/@value">0.15</set> 
+    <!-- Практически нулевая отдача (T1: 0.25) -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='KickDegreesVerticalMax']/@value">0.15</set>
+
+    <!-- 4. Дополнительные улучшения -->
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']/@value">0.8</set> 
+    <!-- Быстрая перезарядка -->
+
+    <set xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='SpreadMultiplierRunning']/@value">1.8</set> 
+    <!-- Меньший штраф к точности при беге -->
+
+    
+
+
+</configs>

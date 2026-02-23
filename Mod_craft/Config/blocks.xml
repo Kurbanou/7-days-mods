@@ -1,0 +1,23 @@
+<configs>
+
+     <!-- Для MotionSensor -->
+    <set xpath="/blocks/block[@name='motionsensor']/property[@name='YawRange']/@value">270</set>
+    <set xpath="/blocks/block[@name='motionsensor']/property[@name='PitchRange']/@value">120</set>
+
+
+    <!-- Ловушки Для забора электро -->
+    <set xpath="/blocks/block[@name='electricfencepost']/property[@name='MaxDamage']/@value">1500</set>
+        <!-- Разрешает ставить заборы друг на друга -->
+    <set xpath="/blocks/block[@name='electricfencepost']/property[@name='StabilitySupport']/@value">true</set>
+
+    <!-- сетка ворота -->
+    <set xpath="/blocks/block[@name='chainlinkFenceDoor']/property[@name='MaxDamage']/@value">4500</set>
+
+
+    <set xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']/@value">30</set>
+    <set xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertSpeed']/@value">4</set>
+
+
+</configs>
+
+
