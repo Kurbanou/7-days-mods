@@ -1,12 +1,27 @@
-<addnew>
-	<append xpath="/recipes">		
-	<recipe name="resourceAcid" count="1" craft_time="1" craft_area="chemistryStation">
-		<ingredient name="resourceOilShale" count="50"/>
-		<ingredient name="resourcePotassiumNitratePowder" count="10"/>
-		<ingredient name="resourceScrapPolymers" count="1"/>
-	</recipe>		
-	<recipe name="resourceScrapPolymers" count="1" craft_time="1" craft_area="chemistryStation">
-		<ingredient name="resourceOilShale" count="6"/>		
-	</recipe>	
-	</append>
-</addnew>
+<configs>
+    <!-- Сначала удаляем старые рецепты, чтобы не было дубликатов -->
+    <remove xpath="/recipes/recipe[@name='drinkJarBeer']"/>
+    <remove xpath="/recipes/recipe[@name='drinkJarGrandpasMoonshine']"/>
+    
+    <!-- А теперь добавляем наши версии рецептов -->
+    <append xpath="/recipes">
+        <recipe name="drinkJarBeer" count="1" craft_time="5" craft_area="chemistryStation" tags="perkMasterChef,learnable,chemStationCrafting">
+            <ingredient name="resourceCropHopsFlower" count="4"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="resourceCropHopsFlower"/>
+            </effect_group>
+        </recipe>
+        
+        <recipe name="drinkJarGrandpasMoonshine" count="1" craft_time="10" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodCornMeal" count="5"/>
+            <ingredient name="drinkJarBeer" count="1"/>
+            <ingredient name="foodCropBlueberries" count="5"/>
+            <ingredient name="resourceAcid" count="1"/>
+            <ingredient name="foodCropGraceCorn" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCornMeal,foodCropBlueberries"/>
+            </effect_group>
+        </recipe>
+    </append>
+</configs>
